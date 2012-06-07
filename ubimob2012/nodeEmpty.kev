@@ -1,0 +1,101 @@
+<kevoree:ContainerRoot xmlns:xml="http://www.omg.org/XMI" xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xmlns:kevoree="http://kevoree/1.0" xmi:version="2.0" xsi:type="kevoree:ContainerRoot">
+ <nodes metaData="x=207,y=143" xsi:type="kevoree:ContainerNode" name="node0" typeDefinition="//@typeDefinitions.0">
+  <dictionary>
+   <values value="INFO" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.0"></values>
+   <values value="WARN" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.1"></values>
+  </dictionary>
+ </nodes>
+ <nodes metaData="x=213,y=209" xsi:type="kevoree:ContainerNode" name="node1" typeDefinition="//@typeDefinitions.0">
+  <dictionary>
+   <values value="INFO" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.0"></values>
+   <values value="WARN" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.1"></values>
+  </dictionary>
+ </nodes>
+ <nodes metaData="x=214,y=296" xsi:type="kevoree:ContainerNode" name="node2" typeDefinition="//@typeDefinitions.0">
+  <dictionary>
+   <values value="INFO" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.0"></values>
+   <values value="WARN" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.1"></values>
+  </dictionary>
+ </nodes>
+ <typeDefinitions deployUnits="//@deployUnits.0" stopMethod="stopNode" bean="org.kevoree.library.defaultNodeTypes.JavaSENode" name="JavaSENode" xsi:type="kevoree:NodeType" factoryBean="org.kevoree.library.defaultNodeTypes.JavaSENodeFactory" startMethod="startNode" updateMethod="updateNode" managedPrimitiveTypes="//@adaptationPrimitiveTypes.0 //@adaptationPrimitiveTypes.1 //@adaptationPrimitiveTypes.2 //@adaptationPrimitiveTypes.3 //@adaptationPrimitiveTypes.4 //@adaptationPrimitiveTypes.5 //@adaptationPrimitiveTypes.6 //@adaptationPrimitiveTypes.7 //@adaptationPrimitiveTypes.8 //@adaptationPrimitiveTypes.9 //@adaptationPrimitiveTypes.10 //@adaptationPrimitiveTypes.11 //@adaptationPrimitiveTypes.12 //@adaptationPrimitiveTypes.13 //@adaptationPrimitiveTypes.14 //@adaptationPrimitiveTypes.15 //@adaptationPrimitiveTypes.16 //@adaptationPrimitiveTypes.17 //@adaptationPrimitiveTypes.18 //@adaptationPrimitiveTypes.19 //@adaptationPrimitiveTypes.20">
+  <dictionaryType>
+   <attributes datatype="enum=INFO,WARN,DEBUG,ERROR,FINE" optional="true" xsi:type="kevoree:DictionaryAttribute" name="logLevel" state="false" fragmentDependant="false"></attributes>
+   <attributes datatype="enum=INFO,WARN,DEBUG,ERROR,FINE" optional="true" xsi:type="kevoree:DictionaryAttribute" name="coreLogLevel" state="false" fragmentDependant="false"></attributes>
+   <defaultValues value="INFO" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.0"></defaultValues>
+   <defaultValues value="WARN" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.0/@dictionaryType/@attributes.1"></defaultValues>
+  </dictionaryType>
+ </typeDefinitions>
+ <typeDefinitions stopMethod="stopRestGroup" bean="org.kevoree.library.nanohttp.NanoRestGroup" name="NanoRestGroup" xsi:type="kevoree:GroupType" factoryBean="org.kevoree.library.nanohttp.NanoRestGroupFactory" startMethod="startRestGroup" deployUnits="//@deployUnits.14">
+  <dictionaryType>
+   <attributes state="false" name="port" xsi:type="kevoree:DictionaryAttribute" optional="true" fragmentDependant="true"></attributes>
+   <attributes state="false" name="ip" xsi:type="kevoree:DictionaryAttribute" optional="true" fragmentDependant="true"></attributes>
+   <defaultValues value="8000" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.1/@dictionaryType/@attributes.0"></defaultValues>
+   <defaultValues value="0.0.0.0" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.1/@dictionaryType/@attributes.1"></defaultValues>
+  </dictionaryType>
+ </typeDefinitions>
+ <typeDefinitions deployUnits="//@deployUnits.15" stopMethod="stopJmdnsGroup" bean="org.kevoree.library.jmdnsrest.JmDNSNanoRestGroup" name="JmDNSNanoRestGroup" xsi:type="kevoree:GroupType" factoryBean="org.kevoree.library.jmdnsrest.JmDNSNanoRestGroupFactory" startMethod="startJmdnsGroup" updateMethod="updateJmDNSGroup" superTypes="//@typeDefinitions.1">
+  <dictionaryType>
+   <attributes state="false" name="port" xsi:type="kevoree:DictionaryAttribute" optional="true" fragmentDependant="true"></attributes>
+   <attributes state="false" name="ip" xsi:type="kevoree:DictionaryAttribute" optional="true" fragmentDependant="true"></attributes>
+   <attributes state="false" name="timer" xsi:type="kevoree:DictionaryAttribute" optional="false" fragmentDependant="true"></attributes>
+   <defaultValues value="8000" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.2/@dictionaryType/@attributes.0"></defaultValues>
+   <defaultValues value="0.0.0.0" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.2/@dictionaryType/@attributes.1"></defaultValues>
+   <defaultValues value="5000" xsi:type="kevoree:DictionaryValue" attribute="//@typeDefinitions.2/@dictionaryType/@attributes.2"></defaultValues>
+  </dictionaryType>
+ </typeDefinitions>
+ <repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/archiva/repository/release/"></repositories>
+ <repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/release"></repositories>
+ <repositories xsi:type="kevoree:Repository" url="http://maven.kevoree.org/snapshots"></repositories>
+ <repositories xsi:type="kevoree:Repository" url="http://repo.maven.apache.org/maven2"></repositories>
+ <libraries name="JavaSE" xsi:type="kevoree:TypeLibrary" subTypes="//@typeDefinitions.0 //@typeDefinitions.1 //@typeDefinitions.2"></libraries>
+ <libraries name="Android" xsi:type="kevoree:TypeLibrary" subTypes="//@typeDefinitions.1 //@typeDefinitions.2"></libraries>
+ <deployUnits requiredLibs="//@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.6 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.10 //@deployUnits.11 //@deployUnits.12 //@deployUnits.13" hashcode="201206011225291" unitName="org.kevoree.library.javase.javaseNode" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.corelibrary.javase" version="1.7.5" type="jar" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="org.kevoree.kcl" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.7.5" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="cglib-nodep" xsi:type="kevoree:DeployUnit" groupName="cglib" version="2.2.2" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="objenesis" xsi:type="kevoree:DeployUnit" groupName="org.objenesis" version="1.2" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="scala-library" xsi:type="kevoree:DeployUnit" groupName="org.scala-lang" version="2.9.2" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="slf4j-api" xsi:type="kevoree:DeployUnit" groupName="org.slf4j" version="1.6.4" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="org.kevoree.kompare" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.7.5" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="org.kevoree.api" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.7.5" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="org.kevoree.model" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.7.5" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="org.kevoree.adaptation.model" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.7.5" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="org.kevoree.framework" xsi:type="kevoree:DeployUnit" groupName="org.kevoree" version="1.7.5" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="jgrapht-jdk1.5" xsi:type="kevoree:DeployUnit" groupName="org.jgrapht" version="0.7.3" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="org.kevoree.tools.javase.framework" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" version="1.7.5" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="org.kevoree.tools.annotation.api" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.tools" version="1.7.5" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits requiredLibs="//@deployUnits.12 //@deployUnits.10 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.5 //@deployUnits.13" hashcode="201206011227648" unitName="org.kevoree.library.javase.nanohttp" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.corelibrary.javase" version="1.7.5" type="jar" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits requiredLibs="//@deployUnits.16 //@deployUnits.17 //@deployUnits.14 //@deployUnits.12 //@deployUnits.10 //@deployUnits.7 //@deployUnits.8 //@deployUnits.9 //@deployUnits.1 //@deployUnits.2 //@deployUnits.3 //@deployUnits.4 //@deployUnits.13" hashcode="201206011227515" unitName="org.kevoree.library.javase.nanohttpAutoDiscovery" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.corelibrary.javase" version="1.7.5" type="jar" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="org.kevoree.extra.osgi.jmdns" xsi:type="kevoree:DeployUnit" groupName="org.kevoree.extra" version="3.4.1-hack" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <deployUnits type="jar" unitName="slf4j-api" xsi:type="kevoree:DeployUnit" groupName="org.slf4j" version="1.6.2" targetNodeType="//@typeDefinitions.0"></deployUnits>
+ <groups typeDefinition="//@typeDefinitions.1" name="sync" xsi:type="kevoree:Group" metaData="x=50,y=50" subNodes="//@nodes.0 //@nodes.1 //@nodes.2">
+  <dictionary>
+   <values attribute="//@typeDefinitions.1/@dictionaryType/@attributes.0" xsi:type="kevoree:DictionaryValue" value="8000" targetNode="//@nodes.0"></values>
+   <values attribute="//@typeDefinitions.1/@dictionaryType/@attributes.1" xsi:type="kevoree:DictionaryValue" value="0.0.0.0" targetNode="//@nodes.0"></values>
+   <values attribute="//@typeDefinitions.1/@dictionaryType/@attributes.0" xsi:type="kevoree:DictionaryValue" value="8001" targetNode="//@nodes.1"></values>
+   <values attribute="//@typeDefinitions.1/@dictionaryType/@attributes.1" xsi:type="kevoree:DictionaryValue" value="0.0.0.0" targetNode="//@nodes.1"></values>
+   <values attribute="//@typeDefinitions.1/@dictionaryType/@attributes.0" xsi:type="kevoree:DictionaryValue" value="8002" targetNode="//@nodes.2"></values>
+   <values attribute="//@typeDefinitions.1/@dictionaryType/@attributes.1" xsi:type="kevoree:DictionaryValue" value="0.0.0.0" targetNode="//@nodes.2"></values>
+  </dictionary>
+ </groups>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="UpdateType"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="UpdateDeployUnit"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="AddType"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="AddDeployUnit"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="AddThirdParty"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="RemoveType"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="RemoveDeployUnit"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="UpdateInstance"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="UpdateBinding"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="UpdateDictionaryInstance"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="AddInstance"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="RemoveInstance"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="AddBinding"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="RemoveBinding"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="AddFragmentBinding"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="RemoveFragmentBinding"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="UpdateFragmentBinding"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="StartInstance"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="StopInstance"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="StartThirdParty"></adaptationPrimitiveTypes>
+ <adaptationPrimitiveTypes xsi:type="kevoree:AdaptationPrimitiveType" name="RemoveThirdParty"></adaptationPrimitiveTypes>
+</kevoree:ContainerRoot>
